@@ -22,8 +22,11 @@ To fully benefit from the coverage included in this course, you will need:<br/>
 This video course is for developers who would like to use design patterns to solve common problems when designing an application using the Spring Framework. A basic knowledge of the Spring Framework and Java is assumed.
 ### Technical Requirements
 This course has the following software requirements:<br/>
-- Windows 7 and above
+- Spring
+- JDK 8+
 - Eclipse
+- A browser
+- Git - optional
 
 ## Related Products
 * [Spring MVC For Beginners : Build Java Web App in 25 Steps [Video]](https://www.packtpub.com/application-development/spring-mvc-beginners-build-java-web-app-25-steps-video?utm_source=github&utm_medium=repository&utm_campaign=9781789139341)
