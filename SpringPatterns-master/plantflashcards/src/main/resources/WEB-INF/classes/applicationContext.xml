@@ -1,0 +1,46 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="herbaceous" class="com.plantflashcards.ui.Herbaceous"/>
+	<bean id="nativeGeo" class="com.plantflashcards.ui.Native"/>
+	<bean id="woody" class="com.plantflashcards.ui.Woody"/>
+	<bean id="evergreen" class="com.bobsgreenhouse.Evergreen"/>
+	<bean id="vine" class="com.plantflashcards.ui.Vine"/>
+		
+	<bean id="plantAttributeGroups" class="com.plantflashcards.ui.PlantAttributeGroups" scope="singleton">
+		<property name="decorators">
+			<map>
+				<entry key="Herbaceous Plant (Flower)" value-ref="herbaceous"/>
+				<entry key="Native" value-ref="nativeGeo"/>
+				<entry key="Woody Plant" value-ref="woody"/>
+				<entry key="Evergreen" value-ref="evergreen"/>
+				<entry key="Vine" value-ref="vine"/>
+			</map>
+		</property>
+	</bean>
+	<bean id="plantHelper" class="com.plantflashcards.helper.BasicPlantHelper" scope="prototype"/>
+	
+	<bean id="woodyPlantHelper" class="com.plantflashcards.helper.WoodyHelper" scope="prototype">
+	</bean>
+	
+	<bean id="vineHelper" class="com.plantflashcards.helper.VineHelper" scope="prototype"/>
+	
+	<bean id="broadleafPlantHelper" class="com.plantflashcards.helper.WoodyHelper" scope="prototype">
+		<property name="evergreenHelper" ref="broadleafEvergreen"/>
+	</bean>
+	
+	<bean id="herbaceousPlantHelper" class="com.plantflashcards.helper.HerbaceousHelper" scope="prototype">
+	</bean>
+	
+	<bean id="coniferousEvergreen" class="com.plantflashcards.helper.EvergreenHelper">
+		<property name="leafType" value="needle"/>
+	</bean>
+	
+	<bean id="broadleafEvergreen" class="com.plantflashcards.helper.EvergreenHelper">
+		<property name="leafType" value="broadleaf"/>
+	</bean>
+	
+
+</beans>

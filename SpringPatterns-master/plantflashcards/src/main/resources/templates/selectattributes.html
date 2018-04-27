@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Select Attributes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>What attributes do you want to assign to your plant?</h1>
+<form action="#" th:action="@{/addplant}" method="GET">
+	<div th:each="component : ${components}">
+		<input type="checkbox" th:name="${component}"/><span th:utext="${component}">Component</span>
+	</div>
+
+<button name="submit" type="submit" value="0">Submit</button>
+</form>
+
+</body>
+</html>

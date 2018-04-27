@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: plantflashcards
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: ucint
+Implementation-Vendor-Id: com.plantflashcards
+Build-Jdk: 1.8.0_91
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
